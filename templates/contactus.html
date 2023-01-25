@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Contactos | Ecomycr
+{% endblock %}
+
+{% block body %}
+
+<div class="shadow p-2 rounded" style="background-color:#e9ecef; color:black">
+    <div class="row text-center font-weight-bold">
+        <div class="col-lg-2 col-md-4 col-sm-6">
+            <p><a href="/products">Productos</a></p>
+        </div>
+        {% for category in categories %}
+        <div class="col-lg-2 col-md-4 col-sm-6">
+            <p><a href="/products/?category={{category.id}}">{{category.category_name}}</a></p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="contact-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title-all text-center">
+                    <h1>Servicio al cliente</h1>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <div class="contact-info-left">
+                    <h2>Ecomy-Express Costa Rica</h2>
+                    <p>
+                        Encuentra lo que necesites, cuando lo necesites, donde lo necesites.
+                    </p>
+                    <ul>
+                        <li>
+                            <p><i class="fas fa-map-marker-alt"></i>Central: San Jose. 13b <br>Costa Rica<br> YA 507 </p>
+                        </li>
+                        <li>
+                            <p><i class="fas fa-phone-square"></i>Teléfono: <a href="/">+506 8813 8520</a></p>
+                        </li>
+                        <li>
+                            <p><i class="fas fa-envelope"></i>Email: <a href="/">tiendas-cr@ecomycr.com</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+                <div class="contact-form-right">
+                    <h2>Consultas</h2>
+                    <p>
+                        Envianos tu consulta y recibe una respuesta pronta a tu E-mail.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
